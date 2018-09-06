@@ -13,12 +13,9 @@ namespace ConsultaCep
         public static Endereco BuscarEnderecoViaCep(string cep)
         {
             string novoEnderecoURL = string.Format(EnderecoURL, cep);
-
             WebClient wc = new WebClient();
             string conteudo = wc.DownloadString(novoEnderecoURL);
-
             Endereco end = JsonConvert.DeserializeObject<Endereco>(conteudo);
-
             return end;
         }
     }
