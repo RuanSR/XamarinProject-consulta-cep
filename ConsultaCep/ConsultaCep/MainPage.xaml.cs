@@ -31,9 +31,9 @@ namespace ConsultaCep
                     DisplayAlert("ERRO!", "DIGITE UM CEP VÁLIDO!", "OK");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                DisplayAlert("ERRO!", "DIGITE UM CEP VÁLIDO!", "OK");
+                DisplayAlert("ERRO!", "ERRO: "ex.Message, "OK");
             }
         }
 
