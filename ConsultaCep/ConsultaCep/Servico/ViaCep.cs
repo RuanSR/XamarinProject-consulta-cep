@@ -4,9 +4,9 @@ using System.Text;
 using System.Net;
 using Newtonsoft.Json;
 
-namespace ConsultaCep.Servico
+namespace ConsultaCep
 {
-    public class ViaCep
+    public static class ViaCep
     {
         private static string EnderecoURL = "https://viacep.com.br/ws/{0}/json/";
 

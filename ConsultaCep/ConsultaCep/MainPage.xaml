@@ -8,11 +8,11 @@
 
         <Image Source="LogoCorreios.png"/>
 
-        <Entry Placeholder="Digite o cep" PlaceholderColor="#FFBF00" BackgroundColor="#FFFFFF"/>
+        <Entry Placeholder="Digite o cep" PlaceholderColor="#FFBF00" BackgroundColor="#FFFFFF" x:Name="entryCep"/>
 
-        <Button Text="BUSCAR CEP" TextColor="#FFFFFF" BackgroundColor="#00416B"/>
+        <Button Text="BUSCAR CEP" TextColor="#FFFFFF" BackgroundColor="#00416B" x:Name="btnBuscar"/>
 
-        <Label/>
+        <Label x:Name="lblResultado"/>
 
     </StackLayout>
 
