@@ -16,6 +16,7 @@ namespace ConsultaCep
             WebClient wc = new WebClient();
             string conteudo = wc.DownloadString(novoEnderecoURL);
             Endereco end = JsonConvert.DeserializeObject<Endereco>(conteudo);
+            if (end.cep == null) return null;
             return end;
         }
     }

@@ -24,7 +24,14 @@ namespace ConsultaCep
                 if (isValidCep(cep))
                 {
                     Endereco end = ViaCep.BuscarEnderecoViaCep(cep);
-                    lblResultado.Text = string.Format("Endereço: Rua {0} Bairro {1}, {2} {3}", end.logradouro, end.bairro, end.localidade, end.uf);
+                    if (end != null)
+                    {
+                        lblResultado.Text = string.Format("Endereço: Rua {0} Bairro {1}, {2} {3}", end.logradouro, end.bairro, end.localidade, end.uf);
+                    }
+                    else
+                    {
+                        DisplayAlert("ERRO!", string.Format("ENDEREÇO DO CEP: {0} NÂO ENCONTRADO!",cep), "OK");
+                    }
                 }
                 else
                 {
@@ -33,7 +40,7 @@ namespace ConsultaCep
             }
             catch (Exception ex)
             {
-                DisplayAlert("ERRO!", "ERRO: "ex.Message, "OK");
+                DisplayAlert("ERRO!", "ERRO: "+ex.Message, "OK");
             }
         }
 
